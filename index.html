@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cache</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="exp-1 pro">
+        <p>
+          EXP-1 AIM: - To use the basic Network Status Monitoring tools
+          (commands) and interpret the findings.
+        </p>
+        <p>ping</p>
+        <p>ifconfig</p>
+        <p>dig</p>
+        <p>nslookup</p>
+        <p>host</p>
+        <p>Lscpu</p>
+        <p>lshw</p>
+      </div>
+
+      <div class="exp-2 pro">
+        <p>
+          EXP-2 AIM:- To use Network traffic monitoring and routing tools
+          (commands) and interpretthe findings
+        </p>
+        <p>sudo bing 192.168.0.1 192.168.1.1</p>
+        <p>sudo apt install tcpdump</p>
+        <p>sudo tcpdump</p>
+        <p>sudo apt install net-tools</p>
+        <p>netstat -a</p>
+        <p>netstat -au</p>
+        <p>netstat -rn</p>
+        <p>sudo apt install tracerroute</p>
+        <p>sudo apt install bmon</p>
+      </div>
+
+      <div class="exp-4 pro">
+        <p>
+          EXP-4 Aim: To calculate the maximum capacity of LAN connection used in
+          monitoring the workstation
+        </p>
+        <p>
+          clear;
+          <br />
+          clc;
+          <br />
+          disp("Define the type");
+          <br />
+          function []=check(a);
+          <br />
+          s=strsplit(a,[1,2]);
+          <br />
+          d=hex2dec(s(2));
+          <br />
+          bin=dec2bin(d,4);
+          <br />
+          bits=strsplit(bin,3);
+          <br />
+          lb=bits(2);
+          <br />
+          if(lb=='0');
+          <br />
+          printf("This is a unicast address beacuse the second hexadecimal digit
+          from the left i.e %s in binary is %s and is even.\n",s(2),bin);
+          <br />
+          else;
+          <br />
+          printf("This is a multicast address beacuse the second hexadecimal
+          digit from the left i.e %s in binary is %s and is odd.\n",s(2),bin);
+          <br />
+          end;
+          <br />
+          endfunction;
+          <br />
+          a="4A:30:10:21:10:1A";
+          <br />
+          printf("\na)");
+          <br />
+          check(a);
+          <br />
+          b="47:20:1B:2E:08:EE";
+          <br />
+          printf("\nb)");
+          <br />
+          check(b);
+          <br />
+          c="FF:FF:FF:FF:FF:FF:"
+          <br />
+          s=strsplit(c,":",6);
+          <br />
+          for i=1:6
+          <br />
+          if(s(i)=="FF")
+          <br />
+          continue;
+          <br />
+          else
+          <br />
+          break;
+          <br />
+          end
+          <br />
+          end
+          <br />
+          if(i==6)
+          <br />
+          printf("\nc)This is a broadcast address beacuse all digits are Fs.")
+          <br />
+          end
+        </p>
+      </div>
+
+      <div class="exp-5 pro">
+        <p>
+          EXP-5 Aim: To perform the system monitoring calculation -to calculate
+          the frequency of pinging
+        </p>
+        <p>
+          clear clc;
+          <br />
+          wstn=24000;
+          <br />
+          data=128;
+          <br />
+          ip=0.05;
+          <br />
+          total_bits=((data*ip)+data)*8*wstn*2;
+          <br />
+          lan_rate=10^7;
+          <br />
+          capacity=0.3;
+          <br />
+          disp(total_bits);
+          <br />
+          time_taken=total_bits/lan_rate;
+          <br />
+          txtime=time_taken/capacity;
+          <br />
+          disp("txtime");
+          <br />
+          disp(txtime);
+          <br />
+          frequency=1/txtime;
+          <br />
+          disp("frequency");
+          <br />
+          disp(frequency);
+          <br />
+          i=1;
+          <br />
+          for capacity_b=0.05:0.01:0.5;
+          <br />
+          txtime_b(i)=time_taken/capacity_b;
+          <br />
+          frequency(i)=1/txtime_b(i);
+          <br />
+          disp(capacity_b);
+          <br />
+
+          j(i)=capacity_b;
+          <br />
+          i=i+1;
+          <br />
+          end
+          <br />
+          plot(j, frequency);
+          <br />
+          xlabel("efficiency");
+          <br />
+          ylabel("frequency");
+        </p>
+      </div>
+
+      <div class="exp-8 pro">
+        <p>
+          EXp-8 AIM: - To install & configure an SNMP to Create a MIB using
+          Cisco packet tracer.
+        </p>
+        <p>-1. Open CISCO Packet Tracer</p>
+        <p>2. Click on new project</p>
+        <p>3. Select and drag PC-0</p>
+        <p>4. Select and drag Server0</p>
+        <p>5. Connect PC to switch through fast ethernet interface</p>
+        <p>
+          6. Click on PC-0, select Desktop and assign any IP address to PC0 and
+          default gateway and DNS server
+        </p>
+        <p>7. Open command line interface and type the commands</p>
+      </div>
+    </div>
+  </body>
+</html>
